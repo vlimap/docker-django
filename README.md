@@ -1,5 +1,3 @@
-Este arquivo explica passo a passo como configurar as variáveis de ambiente, como configurar os Dockerfiles, fazer o "freeze" dos requisitos e como subir os ambientes de desenvolvimento, produção e teste.
-
 # Django with Docker
 
 Este projeto contém uma aplicação Django configurada com Docker para ambientes de desenvolvimento, produção e teste. Abaixo estão as etapas para configurar, rodar e desenvolver o projeto em diferentes ambientes.
