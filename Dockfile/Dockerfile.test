@@ -1,0 +1,17 @@
+# Usando uma imagem Python específica
+FROM python:3.11-slim
+
+# Setando variáveis de ambiente
+ENV DJANGO_ENV=test
+
+# Configurando o diretório de trabalho
+WORKDIR /app
+
+# Copiando os arquivos do projeto
+COPY . /app/
+
+# Instalando as dependências
+RUN pip install -r requirements/requirements-test.txt
+
+# Rodando os testes com o Django
+CMD ["python", "manage.py", "test"]

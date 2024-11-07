@@ -1,0 +1,10 @@
+asgiref==3.8.1
+Django==3.2.25
+django-environ==0.11.2
+djangorestframework==3.15.1
+gunicorn==23.0.0
+packaging==24.1
+psycopg2-binary==2.9.10
+python-decouple==3.8
+pytz==2024.2
+sqlparse==0.5.1

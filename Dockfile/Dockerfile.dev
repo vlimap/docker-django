@@ -1,0 +1,17 @@
+# Usando uma imagem Python específica
+FROM python:3.11-slim
+
+# Setando variáveis de ambiente
+ENV DJANGO_ENV=dev
+
+# Configurando o diretório de trabalho
+WORKDIR /app
+
+# Copiando os arquivos do projeto
+COPY . /app/
+
+# Instalando as dependências
+RUN pip install -r requirements/requirements-dev.txt
+
+# Rodando o servidor Django
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

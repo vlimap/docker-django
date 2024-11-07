@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockfile/Dockerfile.${DJANGO_ENV}  # Use o Dockerfile adequado para o ambiente
+    container_name: django_app
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app  # Garantindo que o código seja montado no container
+    env_file:
+      - .env.${DJANGO_ENV}  # Lê o arquivo de configuração adequado (.env.dev, .env.prod, etc.)
+    networks:
+      - django_network
+
+networks:
+  django_network:
+    driver: bridge
